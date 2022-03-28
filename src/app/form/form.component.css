@@ -1,0 +1,49 @@
+.formDiv{
+    width: 45%;
+    height: auto;
+    margin: 0 0 0 25%;
+}
+
+.expansion-panel{
+    width: 100%;
+    height: 60px;
+    background-color: #3C56B9;
+    
+}
+
+.expansion-panel mat-icon{
+    float: left;
+    color: red;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+
+.inputDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.expansion-panel p{
+    color: white;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.itemsDiv{
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.ietmText{
+    text-align: center;
+    margin-left: 30px;
+}
+
+button{
+    margin-left: 10px;
+}

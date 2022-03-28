@@ -1,0 +1,27 @@
+<div class="formDiv">
+  <div class="expansion-panel" *ngIf="showPanel" (click)="showPanel=false">
+    <p>Count of Tasks: {{tasks.length}} tasks</p>
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </div>
+
+  <div class="inputDiv">
+    <form (ngSubmit)="addTask()">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input required matInput name="task" [(ngModel)]="task" maxlength="256" placeholder="Task description">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="task.length == 0">Add</button>
+      <button mat-raised-button type="button" color="primary" *ngIf="!showPanel" (click)="showPanel=true">Show
+        Count</button>
+    </form>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <mat-list *ngFor="let t of tasks;let i=index">
+    <button matSuffix mat-icon-button (click)="removeTask(i)">
+      <mat-icon>close</mat-icon>
+    </button>
+    <span class="itemText">{{t}}</span>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
